@@ -1,129 +1,356 @@
 .container {
-  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 1110px;
+  padding: 2.1rem 0 4rem 0;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
 
-.footer {
+.nav button:nth-of-type(2),
+.about article button,
+.footer div button {
+  color: white;
+  height: 3.5rem;
+  font-size: 1rem;
+  padding: 0 2.9rem;
+  border-radius: 9999px;
+  letter-spacing: 0.03rem;
+  background-color: black;
+}
+
+.nav button:nth-of-type(2):hover {
+  background-color: #755cde;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 4.17rem;
+}
+
+.hero h2 {
+  font-size: 3.35rem;
+  letter-spacing: 0.08rem;
+}
+
+.hero p {
+  margin-top: 1.5rem;
+}
+
+.hero p,
+.about article p,
+.footer div article p {
+  color: #7a746e;
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+}
+
+.hero div {
+  gap: 1.48rem;
+  display: grid;
+  margin-top: 5.1rem;
+  grid-template-areas:
+    "a b c d"
+    "a e e f";
+}
+
+.hero div svg:nth-child(1) {
+  grid-area: a;
+}
+
+.hero div svg:nth-child(2) {
+  grid-area: b;
+}
+
+.hero div svg:nth-child(3) {
+  grid-area: c;
+}
+
+.hero div svg:nth-child(4) {
+  grid-area: d;
+}
+
+.hero div svg:nth-child(5) {
+  grid-area: e;
+}
+
+.hero div svg:nth-child(6) {
+  grid-area: f;
+}
+
+.about {
+  width: 100%;
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
+  min-width: 1110px;
   align-items: center;
+  margin-top: 8.53rem;
+  justify-content: space-between;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.about article {
+  margin-right: 0.57rem;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.about article h2,
+.footer div article h2 {
+  font-size: 2.35rem;
+  letter-spacing: 0.08rem;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.about article p {
+  margin-top: 2.3rem;
+  margin-bottom: 2rem;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.about article button,
+.footer div button {
+  background-color: #eb7565;
 }
 
-.title,
-.description {
+.about article button:hover,
+.footer div button:hover {
+  background-color: #f6a560;
+}
+
+.work {
+  margin-top: 5.3rem;
+}
+
+.work h2 {
+  font-size: 2rem;
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.work div:nth-of-type(1) {
+  cursor: grab;
   display: flex;
+  width: 2827px;
+  left: -53.45rem;
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+.work div:nth-of-type(1) figure {
+  width: 540px;
+  margin: 0 0.94rem;
+  pointer-events: none;
+}
+
+.work div:nth-of-type(1) figure:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.work div:nth-of-type(1) figure:nth-of-type(5) {
+  margin-right: 0;
+}
+
+.work div:nth-of-type(2) {
+  display: flex;
+  margin-top: 3.45rem;
+  justify-content: center;
+}
+
+.work div:nth-of-type(2) button {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  margin: 0 0.5rem;
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  background-color: black;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+.work div:nth-of-type(2) button:hover {
+  background-color: #755cde;
+}
+
+.footer div {
+  display: flex;
+  min-width: 1110px;
+  margin-top: 5.5rem;
+  align-items: center;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  padding: 5.2rem 4.07rem;
+  background-color: black;
+  justify-content: space-between;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.footer div article {
+  color: white;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.footer div article p {
+  color: white;
+  margin-top: 1.5rem;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.footer div button {
+  margin-right: 1.9rem;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.footer nav {
+  margin-top: 3.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media screen and (min-width: 1100px) {
+  .tablet {
+    display: none !important;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
+@media screen and (max-width: 1100px) {
+  .desktop {
+    display: none !important;
   }
-  .code {
-    background: #111;
+  .container {
+    max-width: 693px;
+    padding: 2.1rem 0 4rem 0;
   }
-  .logo img {
-    filter: invert(1);
+  .hero h2 {
+    font-size: 2.65rem;
+  }
+  .hero p {
+    margin-top: 1.7rem;
+  }
+  .hero div {
+    gap: 1.4rem;
+    margin-top: 4rem;
+    grid-template-areas:
+      "a b c"
+      "a d d"
+      "e f f";
+  }
+  .about {
+    min-width: 693px;
+    margin-top: 7.3rem;
+  }
+  .about figure {
+    width: 300px;
+    height: 300px;
+  }
+  .about article h2,
+  .footer div article h2 {
+    font-size: 1.9rem;
+  }
+  .about article p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .work {
+    margin-top: 7.5rem;
+  }
+  .work div:nth-of-type(1) {
+    left: -66.6rem;
+  }
+  .footer div {
+    display: block;
+    min-width: 693px;
+    text-align: center;
+    margin-top: 7.5rem;
+    padding: 3.5rem 4.07rem;
+  }
+  .footer div button {
+    margin: 2rem auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tablet {
+    display: none !important;
+  }
+  .container {
+    max-width: 334px;
+    padding: 1rem 0 2.1rem 0;
+  }
+  .nav button:nth-of-type(1) {
+    width: 48px;
+  }
+  .nav button:nth-of-type(2),
+  .about article button,
+  .footer div button {
+    height: 2.8rem;
+    font-size: 0.9rem;
+    padding: 0 1.8rem;
+  }
+  .hero {
+    margin-top: 2.3rem;
+  }
+  .hero h2 {
+    font-size: 2.1rem;
+  }
+  .hero p {
+    font-size: 1rem;
+    margin-top: 1.1rem;
+    line-height: 1.65rem;
+  }
+  .hero div {
+    margin-top: 1.85rem;
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d d"
+      "e e"
+      "f f";
+  }
+  .about {
+    display: block;
+    min-width: 334px;
+    margin-top: 6.3rem;
+    text-align: center;
+  }
+  .about figure {
+    margin: 0 auto;
+  }
+  .about article h2 {
+    margin-top: 2.55rem;
+  }
+  .about article h2,
+  .footer div article h2 {
+    font-size: 1.52rem;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+  }
+  .about article p {
+    margin-top: 1.5rem;
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.75rem;
+  }
+  .work {
+    margin-top: 6rem;
+  }
+  .work h2 {
+    font-size: 1.5rem;
+  }
+  .work div:nth-of-type(1) {
+    left: -33.8rem;
+    margin-top: 1.9rem;
+  }
+  .work div:nth-of-type(1) figure {
+    width: 270px;
+    margin: 0 0.5rem;
+  }
+  .work div:nth-of-type(2) {
+    margin-top: 2rem;
+  }
+  .footer div {
+    min-width: 334px;
+    margin-top: 6rem;
+    padding: 2rem 1rem;
+  }
+  .footer div article p {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
 }
